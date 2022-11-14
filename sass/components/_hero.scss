@@ -1,0 +1,40 @@
+.hero {
+  min-height: 600px;
+  max-width: 1600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+
+  background-image: linear-gradient(
+      to right,
+      $hero-linear-gradient-color,
+      $hero-linear-gradient-color
+    ),
+    url(../images/hero-img.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $hero-background-color;
+  text-align: center;
+}
+.hero__container {
+  @extend %container;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero__heading {
+  width: 696px;
+  margin-bottom: 30px;
+
+  color: $white-text;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+}

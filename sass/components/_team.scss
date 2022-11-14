@@ -1,0 +1,38 @@
+.team {
+  @extend %section;
+  background-color: $secondary-background-color;
+}
+.team__container {
+  @extend %container;
+}
+
+.team__list {
+  @extend %list;
+  display: flex;
+  column-gap: 30px;
+}
+.team__item {
+  flex-basis: calc((100% - 90px) / 4);
+  box-shadow: $main-box-shadow;
+  border-radius: 0px 0px 4px 4px;
+}
+.team__wrap-info {
+  padding: 30px 32px;
+
+  background-color: $primary-background-color;
+  text-align: center;
+  border-radius: 0px 0px 4px 4px;
+}
+.team__member-name {
+  margin-bottom: 10px;
+  color: $title-color;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+}
+.team__post {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.2;
+}
