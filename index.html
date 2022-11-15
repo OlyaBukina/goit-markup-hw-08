@@ -16,41 +16,50 @@
     <!-- Header -->
 
     <header class="page-header">
-      <div class="page-header__nav">
-        <nav class="header-nav">
-          <a href="./index.html" class="logo logo--header"
-            ><span class="logo__accent">Web</span>Studio</a
-          >
-          <ul class="header-nav__list">
+      <div class="page-header__container">
+        <a href="./index.html" class="logo logo--header"
+          ><span class="logo__accent">Web</span>Studio</a
+        >
+        <button type="button" class="menu-button">
+          <svg width="40" height="40" aria-label="Перемикач меню">
+            <use class="icon-cross" href="./images/icons.svg#icon-cross"></use>
+            <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+          </svg>
+
+        </button>
+        <div class="page-header__nav">
+          <nav class="header-nav">
+            <ul class="header-nav__list">
+              <li>
+                <a href="./index.html" class="header-nav__link header-nav__link--current">Студія</a>
+              </li>
+              <li>
+                <a href="./portfolio.html" class="header-nav__link">Портфоліо</a>
+              </li>
+              <li>
+                <a href="#" class="header-nav__link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contacts-list">
             <li>
-              <a href="./index.html" class="header-nav__link header-nav__link--current">Студія</a>
+              <a href="mailto:info@devstudio.com" class="contacts-list__link">
+                <svg width="16" height="12" class="contacts-list__icon">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
             </li>
             <li>
-              <a href="./portfolio.html" class="header-nav__link">Портфоліо</a>
-            </li>
-            <li>
-              <a href="#" class="header-nav__link">Контакти</a>
+              <a href="tel:+380961111111" class="contacts-list__link">
+                <svg width="10" height="16" class="contacts-list__icon">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="contacts-list">
-          <li>
-            <a href="mailto:info@devstudio.com" class="contacts-list__link">
-              <svg width="16" height="12" class="contacts-list__icon">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li>
-            <a href="tel:+380961111111" class="contacts-list__link">
-              <svg width="10" height="16" class="contacts-list__icon">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
       </div>
     </header>
 
@@ -207,7 +216,7 @@
           <h2 class="sub-heading">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img src="images/img(1).jpg" alt="Чоловік" width="270" />
+              <img src="images/img(1).jpg" alt="Чоловік" width="450" />
               <div class="team__wrap-info">
                 <h3 class="team__member-name">Ігор Дем'яненко</h3>
                 <p class="team__post">Product Designer</p>
@@ -244,7 +253,7 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="images/img(2).jpg" alt="Жінка" width="270" />
+              <img src="images/img(2).jpg" alt="Жінка" width="450"/>
               <div class="team__wrap-info">
                 <h3 class="team__member-name">Ольга Рєпіна</h3>
                 <p class="team__post">Frontend Developer</p>
@@ -281,7 +290,7 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="images/img(3).jpg" alt="Чоловік" width="270" />
+              <img src="images/img(3).jpg" alt="Чоловік" width="450"/>
               <div class="team__wrap-info">
                 <h3 class="team__member-name">Микола Тарасов</h3>
                 <p class="team__post">Marketing</p>
@@ -318,7 +327,7 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="images/img(4).jpg" alt="Чоловік" width="270" />
+              <img src="images/img(4).jpg" alt="Чоловік" width="450"/>
               <div class="team__wrap-info">
                 <h3 class="team__member-name">Михайло Єрмаков</h3>
                 <p class="team__post">UI Designer</p>

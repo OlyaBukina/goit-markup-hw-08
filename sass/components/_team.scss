@@ -9,15 +9,17 @@
 .team__list {
   @extend %list;
   display: flex;
-  column-gap: 30px;
+  flex-direction: column;
+    gap: 30px;
 }
 .team__item {
-  flex-basis: calc((100% - 90px) / 4);
+  width: 100%;
+    // flex-basis: calc((100% - 90px) / 4);
   box-shadow: $main-box-shadow;
   border-radius: 0px 0px 4px 4px;
 }
 .team__wrap-info {
-  padding: 30px 32px;
+  padding: 30px 32px 24px;
 
   background-color: $primary-background-color;
   text-align: center;

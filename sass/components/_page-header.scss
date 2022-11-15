@@ -1,17 +1,36 @@
 .page-header {
   border-bottom: 1px solid $header-border-color;
 }
-.page-header__nav {
+.page-header__container {
   @extend %container;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  }
+  
+  .page-header__nav {
+    display: none;
+    // position: absolute;
+  
+    @media screen and (min-width:480px) {}
+  
+    // display: flex;
+    // align-items: center;
 }
 .logo--header {
-  padding: 24px 0;
+  padding: 16px 0;
+    // @media screen and (min-width: 480px) {
+  
+    //   }
 }
-.header-nav {
-  display: flex;
-  align-items: center;
+// .header-nav {
+//   display: flex;
+//     align-items: center;
+// }
+.menu-button {
+  background-color: inherit;
+  border: none;
+  padding: 0;
 }
 .header-nav__list {
   @extend %list;
@@ -40,14 +59,14 @@
 }
 .contacts-list {
   @extend %list;
-  display: flex;
-  gap: 30px;
+  // display: flex;
+    // gap: 30px;
   margin-left: auto;
 }
 .contacts-list__link {
   @extend %header-link;
-  display: flex;
-  align-items: center;
+  // display: flex;
+    // align-items: center;
   padding: 32px 0;
   color: $text-color;
 }

@@ -307,14 +307,32 @@ img {
 }
 
 .clients, .team, .works, .advantages {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .clients, .team, .works, .advantages {
+    padding: 94px 0;
+  }
 }
 
-.page-footer__container, .clients__container, .team__container, .works__container, .advantages__container, .hero__container, .page-header__nav {
-  width: 1200px;
+.page-footer__container, .clients__container, .team__container, .works__container, .advantages__container, .hero__container, .page-header__container {
   padding: 0 15px;
   margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  .page-footer__container, .clients__container, .team__container, .works__container, .advantages__container, .hero__container, .page-header__container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page-footer__container, .clients__container, .team__container, .works__container, .advantages__container, .hero__container, .page-header__container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-footer__container, .clients__container, .team__container, .works__container, .advantages__container, .hero__container, .page-header__container {
+    width: 1200px;
+  }
 }
 
 .contacts-list__link, .header-nav__link {
@@ -354,18 +372,23 @@ img {
   border-bottom: 1px solid #ececec;
 }
 
+.page-header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .page-header__nav {
-  display: flex;
-  align-items: center;
+  display: none;
 }
-
 .logo--header {
-  padding: 24px 0;
+  padding: 16px 0;
 }
 
-.header-nav {
-  display: flex;
-  align-items: center;
+.menu-button {
+  background-color: inherit;
+  border: none;
+  padding: 0;
 }
 
 .header-nav__list {
@@ -395,14 +418,10 @@ img {
 }
 
 .contacts-list {
-  display: flex;
-  gap: 30px;
   margin-left: auto;
 }
 
 .contacts-list__link {
-  display: flex;
-  align-items: center;
   padding: 32px 0;
   color: #757575;
 }
@@ -413,7 +432,6 @@ img {
 }
 
 .logo {
-  margin-right: 93px;
   color: #212121;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -425,8 +443,8 @@ img {
 }
 
 .hero {
-  min-height: 600px;
-  max-width: 1600px;
+  min-height: 400px;
+  max-width: 480px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -448,12 +466,11 @@ img {
 }
 
 .hero__heading {
-  width: 696px;
   margin-bottom: 30px;
   color: #fff;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
+  font-size: 26px;
+  line-height: 1.6;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: center;
@@ -461,7 +478,7 @@ img {
 
 .primary-button {
   height: 50px;
-  width: 216px;
+  width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -482,23 +499,26 @@ img {
   background-color: #2196f3;
   cursor: pointer;
 }
+@media screen and (min-width: 1200px) {
+  .primary-button {
+    width: 216px;
+  }
+}
 
-.advantages {
-  padding-bottom: 0;
+@media screen and (min-width: 1200px) {
+  .advantages {
+    padding-bottom: 0;
+  }
 }
 
 .advantages__list {
   display: flex;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
-}
-
-.advantages__item {
-  flex-basis: calc((100% - 90px) / 4);
+  flex-direction: column;
+  gap: 30px;
 }
 
 .advantages__icon-wrap {
-  width: 270px;
+  width: 100%;
   height: 120px;
   display: flex;
   justify-content: center;
@@ -515,16 +535,20 @@ img {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.2;
+  text-align: center;
 }
 
 .advantages__text {
   line-height: 1.7;
 }
 
-.works__list {
-  display: flex;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+.works {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .works {
+    display: block;
+  }
 }
 
 .works__item {
@@ -556,18 +580,18 @@ img {
 
 .team__list {
   display: flex;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .team__item {
-  flex-basis: calc((100% - 90px) / 4);
+  width: 100%;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
 .team__wrap-info {
-  padding: 30px 32px;
+  padding: 30px 32px 24px;
   background-color: #fff;
   text-align: center;
   border-radius: 0px 0px 4px 4px;
@@ -589,12 +613,15 @@ img {
 
 .clients__list {
   display: flex;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.clients__list li {
+  flex: 1 1 auto;
 }
 
 .clients__link {
-  width: 170px;
   height: 92px;
   display: flex;
   justify-content: center;
@@ -615,13 +642,7 @@ img {
   background-color: #2f303a;
 }
 
-.page-footer__container {
-  display: flex;
-}
-
 .footer-address {
-  display: flex;
-  flex-direction: column;
   margin-right: 70px;
 }
 
@@ -677,12 +698,9 @@ img {
 
 .footer-form {
   width: 570px;
-  gap: 12px;
-  display: flex;
 }
 
 .footer-form__input {
-  flex: 1 1 auto;
   padding: 15px 16px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
