@@ -6,6 +6,7 @@ body {
 }
 a {
   text-decoration: none;
+  padding: 0;
 }
 h1,
 h2,
@@ -16,6 +17,8 @@ p {
 }
 img {
   display: block;
+  max-width: 100%;
+    height: auto;
 }
 // .container {
 //   width: 1200px;
