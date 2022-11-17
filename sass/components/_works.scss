@@ -13,8 +13,8 @@
 
 .works__list {
   @extend %list;
-  // display: flex;
-    // column-gap: 30px;
+  display: flex;
+  column-gap: 30px;
 }
 .works__item {
   position: relative;

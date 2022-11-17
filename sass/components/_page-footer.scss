@@ -3,18 +3,38 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: $dark-background-color;
-  text-align: center
+  text-align: center;
+  @media  screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 .page-footer__container {
   @extend %container;
-  // display: flex;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 60px;
+  @media screen and (min-width: 480px) {
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  @media screen and (min-width: 1200px) {
+    gap: 93px;
+    flex-wrap: nowrap;
+  }
 }
 
-// .footer-address {
-//   // display: flex;
-//     // flex-direction: column;
-//   // margin-right: 70px;
-// }
+.footer-address {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 165px;
+  }
+}
+// display: flex;
+  // flex-direction: column;
+// margin-right: 70px;
 
 .logo--footer {
   display: inline-block;
@@ -24,7 +44,6 @@
 }
 .footer-address__list {
   @extend %list;
-  margin-bottom: 60px;
 }
 
 .footer-address__item:not(:last-child) {
@@ -53,7 +72,9 @@
 .footer-join {
   // margin-right: 93px;
     // margin-top: 12px;
-    margin-bottom: 60px;
+    @media screen and (min-width: 768px) {
+      margin-top: 5px;
+    }
 }
 
 .footer-title {
@@ -73,17 +94,24 @@
 }
 // <!-- Subsription section -->
 
-// .footer-subscription {
-//   // margin-top: 12px;
-// }
+.footer-subscription {
+@media screen and ( min-width: 768px) {
+  flex-basis: 450px;
+}
+@media screen and (min-width: 1200px) {
+  flex-grow: 1;
+}
+}
 
-// .footer-form {
-//   width: 570px;
-//   // gap: 12px;
-//     // display: flex;
-// }
+.footer-form {
+  @media screen and (min-width: 1200px ) {
+    display: flex;
+    gap: 12px;
+    
+  }
+  // width: 570px;
+}
 .footer-form__input {
-  // flex: 1 1 auto;
   width: 100%;
   padding: 15px 16px;
   margin-bottom: 20px;
@@ -92,13 +120,18 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   color: $white-text;
-&::placeholder {
+  &::placeholder {
     font-size: 16px;
+  }
+  @media screen and (min-width: 1200px) {
+  flex: 1 1 auto;
+  
 }
 }
   
 .footer-form__button {
   width: 200px;
+  flex-shrink: 0;
   margin: 0 auto;
 &::after {
     content: "";

@@ -11,19 +11,32 @@
   display: flex;
   flex-direction: column;
     gap: 30px;
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
 }
 .team__item {
   width: 100%;
-    // flex-basis: calc((100% - 90px) / 4);
   box-shadow: $main-box-shadow;
   border-radius: 0px 0px 4px 4px;
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }
+
 .team__wrap-info {
   padding: 30px 32px 24px;
 
   background-color: $primary-background-color;
   text-align: center;
   border-radius: 0px 0px 4px 4px;
+  @media screen and (min-width: 1200px) {
+    padding: 30px 32px;
+  }
 }
 .team__member-name {
   margin-bottom: 10px;
