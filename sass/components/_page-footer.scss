@@ -14,8 +14,7 @@
   justify-content: center;
   flex-direction: column;
   gap: 60px;
-  @media screen and (min-width: 480px) {
-  }
+  
 
   @media screen and (min-width: 768px) {
     flex-wrap: wrap;
@@ -24,6 +23,7 @@
   @media screen and (min-width: 1200px) {
     gap: 93px;
     flex-wrap: nowrap;
+    align-items: baseline;
   }
 }
 

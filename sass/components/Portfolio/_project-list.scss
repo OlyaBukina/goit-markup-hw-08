@@ -1,19 +1,38 @@
 .projects {
   @extend %list;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 30px;
+  @media screen and (min-width: 768px) {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 }
 
 .projects__item {
-  flex-grow: 1;
+  flex-basis: calc(100% - 30px);
   transition: box-shadow 250ms $timing-function;
   &:hover,
   &:focus {
     box-shadow: $projects-card-shadow;
   }
+  @media  screen and (min-width: 768px) {
+    flex-basis: calc((100% - 30px)/ 2);
+    display: flex;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 60px)/ 3);
+    
+  }
+}
+.projects__link{
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .projects-info {
+  flex-grow: 1;
   padding: 20px 24px;
   @include border($portfolio-item-border-color);
   border-top: none;
