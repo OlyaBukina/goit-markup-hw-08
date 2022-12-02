@@ -137,6 +137,9 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+  @media screen and (max-width: 437px) {
+      flex-wrap: wrap;
+    }
 }
 .form-policy__input {
   position: absolute;

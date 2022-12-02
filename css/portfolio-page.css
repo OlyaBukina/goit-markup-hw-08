@@ -312,7 +312,7 @@ img {
   }
 }
 
-.footer-join__list, .footer-address__list, .projects, .filter, .mobile-social-list, .contacts-list, .header-nav__list, .social-list {
+.footer-join__list, .footer-address__list, .projects, .filter, .mobile-social-list, .contacts-list, .header-nav__list, .page-header__nav, .social-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -419,6 +419,7 @@ img {
 }
 @media screen and (max-width: 767px) {
   .page-header__container {
+    flex-grow: 1;
     justify-content: space-between;
   }
 }
@@ -428,9 +429,6 @@ img {
   align-items: center;
   justify-content: space-between;
   flex-grow: 1;
-  padding: 0;
-  margin: 0;
-  list-style: none;
 }
 @media (max-width: 767px) {
   .page-header__nav {
@@ -534,6 +532,12 @@ img {
     padding: 32px 0;
   }
 }
+@media screen and (max-width: 374px) {
+  .header-nav__link {
+    font-size: 32px;
+    padding: 12px 0;
+  }
+}
 
 .header-nav__link--current {
   color: #2196f3;
@@ -573,16 +577,9 @@ img {
   color: #757575;
   line-height: 1.17;
 }
-.contacts-list__link--tel {
-  font-size: 24px;
-}
-.contacts-list__link--mail {
-  font-size: 34px;
-  color: #2196f3;
-}
-@media screen and (min-width: 768px) {
-  .contacts-list__link--mail {
-    color: #757575;
+@media screen and (max-width: 374px) {
+  .contacts-list__link {
+    padding: 12px 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -596,6 +593,30 @@ img {
 @media screen and (min-width: 1200px) {
   .contacts-list__link {
     padding: 32px 0;
+  }
+}
+
+.contacts-list__link--tel {
+  font-size: 24px;
+}
+@media screen and (max-width: 374px) {
+  .contacts-list__link--tel {
+    font-size: 20px;
+  }
+}
+
+.contacts-list__link--mail {
+  font-size: 34px;
+  color: #2196f3;
+}
+@media screen and (max-width: 374px) {
+  .contacts-list__link--mail {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts-list__link--mail {
+    color: #757575;
   }
 }
 
@@ -617,6 +638,11 @@ img {
 .mobile-social-list {
   display: flex;
   gap: 10px;
+}
+@media screen and (max-width: 399px) {
+  .mobile-social-list {
+    flex-wrap: wrap;
+  }
 }
 @media screen and (min-width: 768px) {
   .mobile-social-list {
